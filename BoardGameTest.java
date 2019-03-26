@@ -27,7 +27,7 @@ public class BoardGameTest
 	{
 		BoardGame game = new BoardGame();
 		boolean answer = game.addPlayer("Bhaven", GamePiece.RED_RACER, Location.HALL);
-		boolean answer2 = game.addPlayer("Bhaven", GamePiece.RED_RACER, Location.HALL);
+		boolean answer2 = game.addPlayer("Eid", GamePiece.RED_RACER, Location.HALL);
 		
 		Assert.assertEquals("addPlayer method for BoardGame is not working", true, answer);
 		Assert.assertEquals("The answer is suppose to be false", false, answer2);
@@ -48,10 +48,10 @@ public class BoardGameTest
 	{
 		BoardGame game = new BoardGame();
 		game.addPlayer("Bhaven", GamePiece.RED_RACER, Location.HALL);
-		game.addPlayer("Eid", GamePiece.RED_RACER, Location.STUDY);
+		game.addPlayer("Eid", GamePiece.BLUE_RACER, Location.STUDY);
 		String answer = game.getPlayerWithGamePiece(GamePiece.RED_RACER);
 		
-		Assert.assertEquals("The answer is suppose to be Bhaven, Eid, ", "Bhaven, Eid, ", answer);
+		Assert.assertEquals("The answer is suppose to be Bhaven ", "Bhaven", answer);
 	}
 	
 	@Test

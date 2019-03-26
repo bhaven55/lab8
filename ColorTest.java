@@ -7,8 +7,25 @@ public class ColorTest
 	public void Color()
 	{
 		Color blue = Color.BLUE;
-		String answer = blue.toString();
-		Assert.assertEquals("Enum constants are not working", "BLUE", answer);
+		Color cyan = Color.CYAN;
+		Color green = Color.GREEN;
+		Color magenta = Color.MAGENTA;
+		Color red = Color.RED;
+		Color yellow = Color.YELLOW;
+		
+		String Blue = blue.toString();
+		String Cyan = cyan.toString();
+		String Green = green.toString();
+		String Magenta = magenta.toString();
+		String Red = red.toString();
+		String Yellow = yellow.toString();
+		
+		Assert.assertEquals("Enum constants are not working", "BLUE", Blue);
+		Assert.assertEquals("Enum constants are not working", "CYAN", Cyan);
+		Assert.assertEquals("Enum constants are not working", "GREEN", Green);
+		Assert.assertEquals("Enum constants are not working", "MAGENTA", Magenta);
+		Assert.assertEquals("Enum constants are not working", "RED", Red);
+		Assert.assertEquals("Enum constants are not working", "YELLOW", Yellow);
 	}
 	
 	@Test

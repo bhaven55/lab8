@@ -30,7 +30,7 @@ public class BoardGame
 	 */
 	public boolean addPlayer(String playerName, GamePiece gamePiece, Location intialLocation)
 	{
-		if(playerPieces.containsKey(playerName))
+		if(playerPieces.containsKey(playerName) || playerPieces.containsValue(gamePiece))
 		{
 			return false;
 		}
@@ -64,13 +64,13 @@ public class BoardGame
 		// FIXME
 		Set<Map.Entry<String, GamePiece>> entrySet = playerPieces.entrySet();
 		Iterator<Map.Entry<String, GamePiece>> it = entrySet.iterator();
-		String results = "";
+		String results = null;
 		while(it.hasNext())
 		{
 			Map.Entry<String, GamePiece> entry = (Map.Entry<String, GamePiece>) it.next();
 			if(entry.getValue().toString().equals(gamePiece.toString()))
 			{
-				results = results.concat(entry.getKey() + ", ");
+				results = entry.getKey();
 			}
 		}
 		
